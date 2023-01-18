@@ -1,0 +1,52 @@
+.timeline-accept,
+.timeline-circle-color-accept
+{
+    border-color: #0275d8 !important;
+}
+
+.timeline-waiting,
+.timeline-circle-color-waiting
+{
+    border-color: #22e986 !important;
+}
+
+.timeline-processing,
+.timeline-circle-color-processing
+{
+    border-color: #5cb85c !important;
+}
+
+.timeline-reject,
+.timeline-circle-color-reject
+{
+    border-color: #f0211a !important;
+}
+
+
+.timeline-delivered,
+.timeline-circle-color-delivered
+{
+    border-color: #f0ad4e !important;
+}
+
+.timeline-circle-color-waiting::before{
+    background-color: #22e986 !important; 
+}
+
+.timeline-circle-color-accept::before{
+    background-color: #0275d8 !important; 
+}
+
+
+.timeline-circle-color-delivered::before{
+    background-color: #f0ad4e !important;
+}
+
+
+.timeline-circle-color-reject::before{
+    background-color: #f0211a !important;
+}
+
+.timeline-circle-color-processing::before{
+    background-color: #5cb85c !important;
+}

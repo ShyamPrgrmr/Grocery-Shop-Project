@@ -1,0 +1,73 @@
+.order--list{
+    display: flex;
+    flex-direction: column;
+}
+
+.order--list__item{
+    margin: 5px;
+    padding: 15px;
+    box-shadow: 0 0 1px #0000;
+}
+
+.accepted{
+    border: 0.05px solid var(--primary);
+}
+
+.rejected{
+    border: 0.05px solid var(--danger);
+}
+
+.arrived{
+    border: 0.05px solid var(--info);
+}
+
+.delivered{
+    border: 0.05px solid var(--warning);
+}
+
+
+.a{
+    color:  var(--primary);
+}
+
+.r{
+    color:  var(--danger);
+}
+
+.ar{
+    color:  var(--info);
+}
+
+.d{
+    color:  var(--warning);
+}
+
+
+.main{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address{
+    font-size: 15px;
+}
+
+tr th{
+    font-size: 15px !important;
+}
+
+.total{
+    color: var(--primary) !important;
+    background-color: var(--gray-lightest) !important;
+}
+
+.filter{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+
+

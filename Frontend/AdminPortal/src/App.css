@@ -1,0 +1,7 @@
+.text-muted{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}

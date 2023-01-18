@@ -1,0 +1,13 @@
+.co{
+    transition: all .6s;
+    font-size: small;
+}
+
+p{
+    font-size: 11px;
+}
+
+tr th,
+tr td{
+    font-size: 11px !important;
+}

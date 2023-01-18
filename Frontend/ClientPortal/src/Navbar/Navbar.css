@@ -1,0 +1,45 @@
+.logo-svg{
+    width: 87px;
+    height: 27px;
+}
+
+.open{
+    left:0px;
+    transition: all 0.2s ease-in-out;
+}
+
+.open::after{
+    left:320px !important;
+    transition: all 2s ease-in-out;
+}
+
+.close{
+    left:-320px;
+    transition: all 0.2s ease-in-out;
+}
+
+.open-menu{
+    display: block !important;
+    width:120px;
+}
+
+.close-menu{
+    display: none !important;
+    width:120px;
+}
+
+.open-menu-1{
+    display: block !important;
+    
+}
+
+.close-menu-1{
+    display: none !important;
+    
+}
+
+.close-menu:hover,
+.close-menu-1:hover
+{
+    display: block !important;
+}
