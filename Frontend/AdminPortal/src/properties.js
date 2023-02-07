@@ -1,3 +1,3 @@
 export default {
-    node_server_url:"http://localhost:9000"
+    node_server_url:"http://nodeserver:9000"
 }

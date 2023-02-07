@@ -1,0 +1,467 @@
+Attaching to grocery-shop-project_pythonserver_1, grocery-shop-project_mongo_1, grocery-shop-project_mongo-express_1, grocery-shop-project_nodeserver_1
+[33mmongo_1          |[0m about to fork child process, waiting until server is ready for connections.
+[33mmongo_1          |[0m forked process: 27
+[33mmongo_1          |[0m 
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.844+00:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"-","msg":"***** SERVER RESTARTED *****"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.846+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"-","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.848+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"-","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.852+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.862+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.862+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.862+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.863+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.867+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":27,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"21d1350f3898"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.867+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.4","gitVersion":"44ff59461c1353638a71e710f385a566bcd2f547","openSSLVersion":"OpenSSL 3.0.2 15 Mar 2022","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2204","distarch":"x86_64","target_arch":"x86_64"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.867+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"22.04"}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.867+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"127.0.0.1","port":27017,"tls":{"mode":"disabled"}},"processManagement":{"fork":true,"pidFilePath":"/tmp/docker-entrypoint-temp-mongod.pid"},"systemLog":{"destination":"file","logAppend":true,"path":"/proc/1/fd/1"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.868+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:38.876+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=1453M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.314+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":1438}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.314+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.388+00:00"},"s":"W",  "c":"CONTROL",  "id":22120,   "ctx":"initandlisten","msg":"Access control is not enabled for the database. Read and write access to data and configuration is unrestricted","tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.388+00:00"},"s":"W",  "c":"CONTROL",  "id":22178,   "ctx":"initandlisten","msg":"/sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'","tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.388+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":65530,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.388+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"admin.system.version","uuidDisposition":"provided","uuid":{"uuid":{"$uuid":"d057b182-be98-46ca-8969-0e94b5d087ba"}},"options":{"uuid":{"$uuid":"d057b182-be98-46ca-8969-0e94b5d087ba"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.422+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"d057b182-be98-46ca-8969-0e94b5d087ba"}},"namespace":"admin.system.version","index":"_id_","ident":"index-1--6714799667609875724","collectionIdent":"collection-0--6714799667609875724","commitTimestamp":null}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.423+00:00"},"s":"I",  "c":"REPL",     "id":20459,   "ctx":"initandlisten","msg":"Setting featureCompatibilityVersion","attr":{"newVersion":"6.0"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.423+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"6.0","context":"setFCV"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.423+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":17,"maxWireVersion":17},"outgoing":{"minWireVersion":17,"maxWireVersion":17},"isInternalClient":true}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.423+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":17,"maxWireVersion":17},"outgoing":{"minWireVersion":17,"maxWireVersion":17},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":17,"maxWireVersion":17},"outgoing":{"minWireVersion":17,"maxWireVersion":17},"isInternalClient":true}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.424+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"6.0","context":"startup"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.424+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.424+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.425+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.433+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.startup_log","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"c89efc39-96c6-43a3-bc2c-67dad445dfc8"}},"options":{"capped":true,"size":10485760}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.456+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"c89efc39-96c6-43a3-bc2c-67dad445dfc8"}},"namespace":"local.startup_log","index":"_id_","ident":"index-3--6714799667609875724","collectionIdent":"collection-2--6714799667609875724","commitTimestamp":null}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.457+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.457+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.463+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"LogicalSessionCacheRefresh","msg":"createCollection","attr":{"namespace":"config.system.sessions","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"c6454ba3-6fed-43d4-bd23-afa69e266d17"}},"options":{}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.469+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.469+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.469+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+[33mmongo_1          |[0m child process started successfully, parent exiting
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.473+00:00"},"s":"I",  "c":"CONTROL",  "id":20712,   "ctx":"LogicalSessionCacheReap","msg":"Sessions collection is not set up; waiting until next sessions reap interval","attr":{"error":"NamespaceNotFound: config.system.sessions does not exist"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.515+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"c6454ba3-6fed-43d4-bd23-afa69e266d17"}},"namespace":"config.system.sessions","index":"_id_","ident":"index-5--6714799667609875724","collectionIdent":"collection-4--6714799667609875724","commitTimestamp":null}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:40.524+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"c6454ba3-6fed-43d4-bd23-afa69e266d17"}},"namespace":"config.system.sessions","index":"lsidTTLIndex","ident":"index-6--6714799667609875724","collectionIdent":"collection-4--6714799667609875724","commitTimestamp":null}}
+[35mpythonserver_1   |[0m Watching for file changes with StatReloader
+[35mpythonserver_1   |[0m Performing system checks...
+[35mpythonserver_1   |[0m 
+[36mmongo-express_1  |[0m Welcome to mongo-express
+[36mmongo-express_1  |[0m ------------------------
+[36mmongo-express_1  |[0m 
+[36mmongo-express_1  |[0m 
+[36mmongo-express_1  |[0m (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[36mmongo-express_1  |[0m Could not connect to database using connectionString: mongodb://root:root@mongo:27017"
+[36mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [mongo:27017] on first connect [Error: connect ECONNREFUSED 172.23.0.4:27017
+[36mmongo-express_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+[36mmongo-express_1  |[0m   name: 'MongoNetworkError'
+[36mmongo-express_1  |[0m }]
+[36mmongo-express_1  |[0m     at Pool.<anonymous> (/node_modules/mongodb/lib/core/topologies/server.js:441:11)
+[36mmongo-express_1  |[0m     at Pool.emit (events.js:314:20)
+[36mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:564:14
+[36mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:1000:11
+[36mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/connect.js:32:7
+[36mmongo-express_1  |[0m     at callback (/node_modules/mongodb/lib/core/connection/connect.js:300:5)
+[36mmongo-express_1  |[0m     at Socket.<anonymous> (/node_modules/mongodb/lib/core/connection/connect.js:330:7)
+[36mmongo-express_1  |[0m     at Object.onceWrapper (events.js:421:26)
+[36mmongo-express_1  |[0m     at Socket.emit (events.js:314:20)
+[36mmongo-express_1  |[0m     at emitErrorNT (internal/streams/destroy.js:92:8)
+[36mmongo-express_1  |[0m     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+[36mmongo-express_1  |[0m     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[36mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[36mmongo-express_1  |[0m (node:7) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[32mnodeserver_1     |[0m /app/index.js:172
+[32mnodeserver_1     |[0m console.log(MONGO_URL);
+[32mnodeserver_1     |[0m             ^
+[32mnodeserver_1     |[0m 
+[32mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[32mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[32mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[32mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[32mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[32mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[32mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[32mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[32mnodeserver_1     |[0m 
+[32mnodeserver_1     |[0m Node.js v19.6.0
+[35mpythonserver_1   |[0m System check identified no issues (0 silenced).
+[35mpythonserver_1   |[0m February 04, 2023 - 14:39:43
+[35mpythonserver_1   |[0m Django version 3.2.17, using settings 'groceryshop.settings'
+[35mpythonserver_1   |[0m Starting development server at http://0.0.0.0:8000/
+[35mpythonserver_1   |[0m Quit the server with CONTROL-C.
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.696+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40288","uuid":"b62182dd-1587-4539-9470-831c84654cb4","connectionId":1,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.704+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"127.0.0.1:40288","client":"conn1","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.730+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40300","uuid":"e66670fe-9f02-4bc5-80f8-5dbfdb9b1fe8","connectionId":2,"connectionCount":2}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.730+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40316","uuid":"0f25ef43-ffd1-4fba-824e-969c41f6c90b","connectionId":3,"connectionCount":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.733+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"127.0.0.1:40300","client":"conn2","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.736+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn3","msg":"client metadata","attr":{"remote":"127.0.0.1:40316","client":"conn3","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.738+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40330","uuid":"37f1d49e-3fac-47cd-93b3-d98d0c1f1b83","connectionId":4,"connectionCount":4}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:43.744+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn4","msg":"client metadata","attr":{"remote":"127.0.0.1:40330","client":"conn4","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[34mmongo-express_1  |[0m Welcome to mongo-express
+[34mmongo-express_1  |[0m ------------------------
+[34mmongo-express_1  |[0m 
+[34mmongo-express_1  |[0m 
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:44.686+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn1","msg":"Connection ended","attr":{"remote":"127.0.0.1:40288","uuid":"b62182dd-1587-4539-9470-831c84654cb4","connectionId":1,"connectionCount":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:44.687+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn3","msg":"Connection ended","attr":{"remote":"127.0.0.1:40316","uuid":"0f25ef43-ffd1-4fba-824e-969c41f6c90b","connectionId":3,"connectionCount":2}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:44.688+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn4","msg":"Connection ended","attr":{"remote":"127.0.0.1:40330","uuid":"37f1d49e-3fac-47cd-93b3-d98d0c1f1b83","connectionId":4,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:44.688+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn2","msg":"Connection ended","attr":{"remote":"127.0.0.1:40300","uuid":"e66670fe-9f02-4bc5-80f8-5dbfdb9b1fe8","connectionId":2,"connectionCount":0}}
+[34mmongo-express_1  |[0m (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[34mmongo-express_1  |[0m Could not connect to database using connectionString: mongodb://root:root@mongo:27017"
+[34mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [mongo:27017] on first connect [Error: connect ECONNREFUSED 172.23.0.4:27017
+[34mmongo-express_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+[34mmongo-express_1  |[0m   name: 'MongoNetworkError'
+[34mmongo-express_1  |[0m }]
+[34mmongo-express_1  |[0m     at Pool.<anonymous> (/node_modules/mongodb/lib/core/topologies/server.js:441:11)
+[34mmongo-express_1  |[0m     at Pool.emit (events.js:314:20)
+[34mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:564:14
+[34mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:1000:11
+[34mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/connect.js:32:7
+[34mmongo-express_1  |[0m     at callback (/node_modules/mongodb/lib/core/connection/connect.js:300:5)
+[34mmongo-express_1  |[0m     at Socket.<anonymous> (/node_modules/mongodb/lib/core/connection/connect.js:330:7)
+[34mmongo-express_1  |[0m     at Object.onceWrapper (events.js:421:26)
+[34mmongo-express_1  |[0m     at Socket.emit (events.js:314:20)
+[34mmongo-express_1  |[0m     at emitErrorNT (internal/streams/destroy.js:92:8)
+[34mmongo-express_1  |[0m     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+[34mmongo-express_1  |[0m     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[34mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[34mmongo-express_1  |[0m (node:7) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[36mgrocery-shop-project_mongo-express_1 exited with code 0
+[0m[36;1mnodeserver_1     |[0m /app/index.js:172
+[36;1mnodeserver_1     |[0m console.log(MONGO_URL);
+[36;1mnodeserver_1     |[0m             ^
+[36;1mnodeserver_1     |[0m 
+[36;1mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[36;1mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[36;1mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[36;1mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[36;1mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[36;1mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[36;1mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[36;1mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[36;1mnodeserver_1     |[0m 
+[36;1mnodeserver_1     |[0m Node.js v19.6.0
+[32mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[33;1mmongo-express_1  |[0m Welcome to mongo-express
+[33;1mmongo-express_1  |[0m ------------------------
+[33;1mmongo-express_1  |[0m 
+[33;1mmongo-express_1  |[0m 
+[33;1mmongo-express_1  |[0m (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[33;1mmongo-express_1  |[0m Could not connect to database using connectionString: mongodb://root:root@mongo:27017"
+[33;1mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [mongo:27017] on first connect [Error: connect ECONNREFUSED 172.23.0.4:27017
+[33;1mmongo-express_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+[33;1mmongo-express_1  |[0m   name: 'MongoNetworkError'
+[33;1mmongo-express_1  |[0m }]
+[33;1mmongo-express_1  |[0m     at Pool.<anonymous> (/node_modules/mongodb/lib/core/topologies/server.js:441:11)
+[33;1mmongo-express_1  |[0m     at Pool.emit (events.js:314:20)
+[33;1mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:564:14
+[33;1mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:1000:11
+[33;1mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/connect.js:32:7
+[33;1mmongo-express_1  |[0m     at callback (/node_modules/mongodb/lib/core/connection/connect.js:300:5)
+[33;1mmongo-express_1  |[0m     at Socket.<anonymous> (/node_modules/mongodb/lib/core/connection/connect.js:330:7)
+[33;1mmongo-express_1  |[0m     at Object.onceWrapper (events.js:421:26)
+[33;1mmongo-express_1  |[0m     at Socket.emit (events.js:314:20)
+[33;1mmongo-express_1  |[0m     at emitErrorNT (internal/streams/destroy.js:92:8)
+[33;1mmongo-express_1  |[0m     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+[33;1mmongo-express_1  |[0m     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[33;1mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[33;1mmongo-express_1  |[0m (node:7) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.679+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40332","uuid":"c0bfa582-3a29-4d27-b460-19a81f0dba83","connectionId":5,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.701+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn5","msg":"client metadata","attr":{"remote":"127.0.0.1:40332","client":"conn5","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.746+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40348","uuid":"b0e1c03a-1e42-4d4d-8000-d94c0f98c85a","connectionId":6,"connectionCount":2}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.747+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40350","uuid":"79ef1128-a03f-4aec-bff1-f5dfd7263f1e","connectionId":7,"connectionCount":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.756+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn7","msg":"client metadata","attr":{"remote":"127.0.0.1:40350","client":"conn7","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.756+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn6","msg":"client metadata","attr":{"remote":"127.0.0.1:40348","client":"conn6","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.764+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40352","uuid":"96947c3f-f387-4ad5-a9cb-26356275de33","connectionId":8,"connectionCount":4}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:47.769+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn8","msg":"client metadata","attr":{"remote":"127.0.0.1:40352","client":"conn8","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[34mgrocery-shop-project_mongo-express_1 exited with code 0
+[0m[32;1mnodeserver_1     |[0m /app/index.js:172
+[32;1mnodeserver_1     |[0m console.log(MONGO_URL);
+[32;1mnodeserver_1     |[0m             ^
+[32;1mnodeserver_1     |[0m 
+[32;1mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[32;1mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[32;1mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[32;1mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[32;1mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[32;1mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[32;1mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[32;1mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[32;1mnodeserver_1     |[0m 
+[32;1mnodeserver_1     |[0m Node.js v19.6.0
+[33mmongo_1          |[0m admin> ... ... ... ... {"t":{"$date":"2023-02-04T14:39:48.781+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"conn8","msg":"createCollection","attr":{"namespace":"admin.system.users","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"49dbe17f-3d67-47f8-832f-013eafb33b3e"}},"options":{}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.807+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"conn8","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"49dbe17f-3d67-47f8-832f-013eafb33b3e"}},"namespace":"admin.system.users","index":"_id_","ident":"index-8--6714799667609875724","collectionIdent":"collection-7--6714799667609875724","commitTimestamp":null}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.807+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"conn8","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"49dbe17f-3d67-47f8-832f-013eafb33b3e"}},"namespace":"admin.system.users","index":"user_1_db_1","ident":"index-9--6714799667609875724","collectionIdent":"collection-7--6714799667609875724","commitTimestamp":null}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.808+00:00"},"s":"I",  "c":"COMMAND",  "id":51803,   "ctx":"conn8","msg":"Slow query","attr":{"type":"command","ns":"admin.$cmd","appName":"mongosh 1.6.2","command":{"createUser":"root","pwd":"xxx","roles":[{"role":"root","db":"admin"}],"lsid":{"id":{"$uuid":"3cf5eb61-e5b0-4fac-9d43-0137dbf58ecb"}},"$db":"admin"},"numYields":0,"reslen":38,"locks":{"ParallelBatchWriterMode":{"acquireCount":{"r":4}},"FeatureCompatibilityVersion":{"acquireCount":{"w":4}},"ReplicationStateTransition":{"acquireCount":{"w":4}},"Global":{"acquireCount":{"w":4}},"Database":{"acquireCount":{"w":4}},"Collection":{"acquireCount":{"w":4}},"Mutex":{"acquireCount":{"r":5}}},"flowControl":{"acquireCount":4,"timeAcquiringMicros":29},"storage":{},"remote":"127.0.0.1:40352","protocol":"op_msg","durationMillis":153}}
+[36;1mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[33mmongo_1          |[0m { ok: 1 }
+[33mmongo_1          |[0m admin> {"t":{"$date":"2023-02-04T14:39:48.973+00:00"},"s":"I",  "c":"-",        "id":20883,   "ctx":"conn5","msg":"Interrupted operation as its client disconnected","attr":{"opId":131}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.975+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn5","msg":"Connection ended","attr":{"remote":"127.0.0.1:40332","uuid":"c0bfa582-3a29-4d27-b460-19a81f0dba83","connectionId":5,"connectionCount":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.976+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn8","msg":"Connection ended","attr":{"remote":"127.0.0.1:40352","uuid":"96947c3f-f387-4ad5-a9cb-26356275de33","connectionId":8,"connectionCount":2}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.977+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn6","msg":"Connection ended","attr":{"remote":"127.0.0.1:40348","uuid":"b0e1c03a-1e42-4d4d-8000-d94c0f98c85a","connectionId":6,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:48.977+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn7","msg":"Connection ended","attr":{"remote":"127.0.0.1:40350","uuid":"79ef1128-a03f-4aec-bff1-f5dfd7263f1e","connectionId":7,"connectionCount":0}}
+[33mmongo_1          |[0m 
+[33mmongo_1          |[0m /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/mongo-init.js
+[35;1mmongo-express_1  |[0m Welcome to mongo-express
+[35;1mmongo-express_1  |[0m ------------------------
+[35;1mmongo-express_1  |[0m 
+[35;1mmongo-express_1  |[0m 
+[35;1mmongo-express_1  |[0m (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[35;1mmongo-express_1  |[0m Could not connect to database using connectionString: mongodb://root:root@mongo:27017"
+[35;1mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [mongo:27017] on first connect [Error: connect ECONNREFUSED 172.23.0.4:27017
+[35;1mmongo-express_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+[35;1mmongo-express_1  |[0m   name: 'MongoNetworkError'
+[35;1mmongo-express_1  |[0m }]
+[35;1mmongo-express_1  |[0m     at Pool.<anonymous> (/node_modules/mongodb/lib/core/topologies/server.js:441:11)
+[35;1mmongo-express_1  |[0m     at Pool.emit (events.js:314:20)
+[35;1mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:564:14
+[35;1mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:1000:11
+[35;1mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/connect.js:32:7
+[35;1mmongo-express_1  |[0m     at callback (/node_modules/mongodb/lib/core/connection/connect.js:300:5)
+[35;1mmongo-express_1  |[0m     at Socket.<anonymous> (/node_modules/mongodb/lib/core/connection/connect.js:330:7)
+[35;1mmongo-express_1  |[0m     at Object.onceWrapper (events.js:421:26)
+[35;1mmongo-express_1  |[0m     at Socket.emit (events.js:314:20)
+[35;1mmongo-express_1  |[0m     at emitErrorNT (internal/streams/destroy.js:92:8)
+[35;1mmongo-express_1  |[0m     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+[35;1mmongo-express_1  |[0m     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[35;1mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[35;1mmongo-express_1  |[0m (node:7) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[33;1mgrocery-shop-project_mongo-express_1 exited with code 0
+[0m[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.355+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40358","uuid":"a7cea7d2-0cff-4665-a844-ff2d91a6e406","connectionId":9,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.384+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn9","msg":"client metadata","attr":{"remote":"127.0.0.1:40358","client":"conn9","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.436+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40360","uuid":"e488c8f5-57b6-474f-9a16-db11c8dedc48","connectionId":10,"connectionCount":2}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.436+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40374","uuid":"959882ac-e6b3-4162-84a2-f9aa2e3b5d29","connectionId":11,"connectionCount":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.439+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn10","msg":"client metadata","attr":{"remote":"127.0.0.1:40360","client":"conn10","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.441+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn11","msg":"client metadata","attr":{"remote":"127.0.0.1:40374","client":"conn11","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.447+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40386","uuid":"922d02b4-f1c3-4da1-a9f9-ff6bb937fc7e","connectionId":12,"connectionCount":4}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.460+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:40388","uuid":"62db2b27-c8d5-4859-89a9-39fb0122fec9","connectionId":13,"connectionCount":5}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.468+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn12","msg":"client metadata","attr":{"remote":"127.0.0.1:40386","client":"conn12","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:51.469+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn13","msg":"client metadata","attr":{"remote":"127.0.0.1:40388","client":"conn13","doc":{"driver":{"name":"nodejs|mongosh","version":"4.13.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"Node.js v16.19.0, LE (unified)","version":"4.13.0|1.6.2","application":{"name":"mongosh 1.6.2"}}}}
+[34;1mnodeserver_1     |[0m /app/index.js:172
+[34;1mnodeserver_1     |[0m console.log(MONGO_URL);
+[34;1mnodeserver_1     |[0m             ^
+[34;1mnodeserver_1     |[0m 
+[34;1mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[34;1mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[34;1mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[34;1mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[34;1mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[34;1mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[34;1mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[34;1mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[34;1mnodeserver_1     |[0m 
+[34;1mnodeserver_1     |[0m Node.js v19.6.0
+[32;1mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.283+00:00"},"s":"I",  "c":"COMMAND",  "id":51803,   "ctx":"conn13","msg":"Slow query","attr":{"type":"command","ns":"shop.$cmd","appName":"mongosh 1.6.2","command":{"createUser":"root","pwd":"xxx","roles":[{"role":"readWrite","db":"shop"}],"lsid":{"id":{"$uuid":"f19c8aaf-7af2-4df4-9fd6-e083eebf6498"}},"$db":"shop"},"numYields":0,"reslen":38,"locks":{"ParallelBatchWriterMode":{"acquireCount":{"r":2}},"FeatureCompatibilityVersion":{"acquireCount":{"w":2}},"ReplicationStateTransition":{"acquireCount":{"w":2}},"Global":{"acquireCount":{"w":2}},"Database":{"acquireCount":{"w":2}},"Collection":{"acquireCount":{"w":2}},"Mutex":{"acquireCount":{"r":2}}},"flowControl":{"acquireCount":2,"timeAcquiringMicros":4},"storage":{},"remote":"127.0.0.1:40388","protocol":"op_msg","durationMillis":103}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.306+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn13","msg":"Connection ended","attr":{"remote":"127.0.0.1:40388","uuid":"62db2b27-c8d5-4859-89a9-39fb0122fec9","connectionId":13,"connectionCount":4}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.307+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn12","msg":"Connection ended","attr":{"remote":"127.0.0.1:40386","uuid":"922d02b4-f1c3-4da1-a9f9-ff6bb937fc7e","connectionId":12,"connectionCount":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.308+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn11","msg":"Connection ended","attr":{"remote":"127.0.0.1:40374","uuid":"959882ac-e6b3-4162-84a2-f9aa2e3b5d29","connectionId":11,"connectionCount":2}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.308+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn10","msg":"Connection ended","attr":{"remote":"127.0.0.1:40360","uuid":"e488c8f5-57b6-474f-9a16-db11c8dedc48","connectionId":10,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.308+00:00"},"s":"I",  "c":"-",        "id":20883,   "ctx":"conn9","msg":"Interrupted operation as its client disconnected","attr":{"opId":184}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.309+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn9","msg":"Connection ended","attr":{"remote":"127.0.0.1:40358","uuid":"a7cea7d2-0cff-4665-a844-ff2d91a6e406","connectionId":9,"connectionCount":0}}
+[33mmongo_1          |[0m 
+[33mmongo_1          |[0m 
+[33mmongo_1          |[0m 
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.343+00:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"-","msg":"***** SERVER RESTARTED *****"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.345+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.346+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.349+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.351+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.351+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.351+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
+[33mmongo_1          |[0m Killing process with pid: 27
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"CONTROL",  "id":23377,   "ctx":"SignalHandler","msg":"Received signal","attr":{"signal":15,"error":"Terminated"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"CONTROL",  "id":23378,   "ctx":"SignalHandler","msg":"Signal was sent by kill(2)","attr":{"pid":117,"uid":999}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"CONTROL",  "id":23381,   "ctx":"SignalHandler","msg":"will terminate after current cmd ends"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"SignalHandler","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"SignalHandler","msg":"Attempting to enter quiesce mode"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"-",        "id":6371601, "ctx":"SignalHandler","msg":"Shutting down the FLE Crud thread pool"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"SignalHandler","msg":"Shutting down the MirrorMaestro"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.352+00:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"SignalHandler","msg":"Shutting down the WaitForMajorityService"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.353+00:00"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"SignalHandler","msg":"Shutting down the LogicalSessionCache"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.354+00:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"SignalHandler","msg":"Shutdown: going to close listening sockets"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.356+00:00"},"s":"I",  "c":"NETWORK",  "id":23017,   "ctx":"listener","msg":"removing socket file","attr":{"path":"/tmp/mongodb-27017.sock"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.357+00:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"SignalHandler","msg":"Shutting down the global connection pool"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.357+00:00"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"SignalHandler","msg":"Shutting down the FlowControlTicketholder"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.357+00:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"SignalHandler","msg":"Stopping further Flow Control ticket acquisitions."}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.358+00:00"},"s":"I",  "c":"CONTROL",  "id":4784908, "ctx":"SignalHandler","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.358+00:00"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"SignalHandler","msg":"Shutting down the ReplicationCoordinator"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.358+00:00"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"SignalHandler","msg":"Shutting down the ShardingInitializationMongoD"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.358+00:00"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"SignalHandler","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.358+00:00"},"s":"I",  "c":"-",        "id":4784912, "ctx":"SignalHandler","msg":"Killing all operations for shutdown"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.358+00:00"},"s":"I",  "c":"-",        "id":4695300, "ctx":"SignalHandler","msg":"Interrupted all currently running operations","attr":{"opsKilled":3}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.359+00:00"},"s":"I",  "c":"TENANT_M", "id":5093807, "ctx":"SignalHandler","msg":"Shutting down all TenantMigrationAccessBlockers on global shutdown"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.359+00:00"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"SignalHandler","msg":"Shutting down all open transactions"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.359+00:00"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"SignalHandler","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.359+00:00"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"SignalHandler","msg":"Shutting down the IndexBuildsCoordinator"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.359+00:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"SignalHandler","msg":"Shutting down the ReplicaSetMonitor"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.360+00:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"SignalHandler","msg":"Shutting down the MigrationUtilExecutor"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.360+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.361+00:00"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"SignalHandler","msg":"Shutting down the ServiceEntryPoint"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.361+00:00"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"SignalHandler","msg":"Shutting down free monitoring"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.361+00:00"},"s":"I",  "c":"CONTROL",  "id":20609,   "ctx":"SignalHandler","msg":"Shutting down free monitoring"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.361+00:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"SignalHandler","msg":"Shutting down the HealthLog"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.362+00:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"SignalHandler","msg":"Shutting down the TTL monitor"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.362+00:00"},"s":"I",  "c":"INDEX",    "id":3684100, "ctx":"SignalHandler","msg":"Shutting down TTL collection monitor thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.362+00:00"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"SignalHandler","msg":"Finished shutting down TTL collection monitor thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.363+00:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"SignalHandler","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.363+00:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"SignalHandler","msg":"Acquiring the global lock for shutdown"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.363+00:00"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"SignalHandler","msg":"Shutting down the storage engine"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.363+00:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"SignalHandler","msg":"Shutting down journal flusher thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.364+00:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"SignalHandler","msg":"Finished shutting down journal flusher thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.364+00:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"SignalHandler","msg":"Shutting down checkpoint thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.364+00:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"SignalHandler","msg":"Finished shutting down checkpoint thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.365+00:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"SignalHandler","msg":"Deregistering all the collections"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.365+00:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"SignalHandler","msg":"Timestamp monitor shutting down"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.366+00:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"SignalHandler","msg":"WiredTigerKVEngine shutting down"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.366+00:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"SignalHandler","msg":"Shutting down session sweeper thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.366+00:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"SignalHandler","msg":"Finished shutting down session sweeper thread"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.372+00:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"SignalHandler","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.432+00:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"SignalHandler","msg":"WiredTiger closed","attr":{"durationMillis":60}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.432+00:00"},"s":"I",  "c":"STORAGE",  "id":22279,   "ctx":"SignalHandler","msg":"shutdown: removing fs lock..."}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.432+00:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"SignalHandler","msg":"Dropping the scope cache for shutdown"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.432+00:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"SignalHandler","msg":"Shutting down full-time diagnostic data capture"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.437+00:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"SignalHandler","msg":"Now exiting"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:52.438+00:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"SignalHandler","msg":"Shutting down","attr":{"exitCode":0}}
+[36mmongo-express_1  |[0m Welcome to mongo-express
+[36mmongo-express_1  |[0m ------------------------
+[36mmongo-express_1  |[0m 
+[36mmongo-express_1  |[0m 
+[36mmongo-express_1  |[0m (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[36mmongo-express_1  |[0m Could not connect to database using connectionString: mongodb://root:root@mongo:27017"
+[36mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [mongo:27017] on first connect [Error: connect ECONNREFUSED 172.23.0.4:27017
+[36mmongo-express_1  |[0m     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+[36mmongo-express_1  |[0m   name: 'MongoNetworkError'
+[36mmongo-express_1  |[0m }]
+[36mmongo-express_1  |[0m     at Pool.<anonymous> (/node_modules/mongodb/lib/core/topologies/server.js:441:11)
+[36mmongo-express_1  |[0m     at Pool.emit (events.js:314:20)
+[36mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:564:14
+[36mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/pool.js:1000:11
+[36mmongo-express_1  |[0m     at /node_modules/mongodb/lib/core/connection/connect.js:32:7
+[36mmongo-express_1  |[0m     at callback (/node_modules/mongodb/lib/core/connection/connect.js:300:5)
+[36mmongo-express_1  |[0m     at Socket.<anonymous> (/node_modules/mongodb/lib/core/connection/connect.js:330:7)
+[36mmongo-express_1  |[0m     at Object.onceWrapper (events.js:421:26)
+[36mmongo-express_1  |[0m     at Socket.emit (events.js:314:20)
+[36mmongo-express_1  |[0m     at emitErrorNT (internal/streams/destroy.js:92:8)
+[36mmongo-express_1  |[0m     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+[36mmongo-express_1  |[0m     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[36mmongo-express_1  |[0m (node:7) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+[36mmongo-express_1  |[0m (node:7) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[33mmongo_1          |[0m 
+[33mmongo_1          |[0m MongoDB init process complete; ready for start up.
+[33mmongo_1          |[0m 
+[35;1mgrocery-shop-project_mongo-express_1 exited with code 0
+[0m[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.435+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"-","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.436+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.439+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.442+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.442+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.442+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.443+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.444+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"21d1350f3898"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.445+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.4","gitVersion":"44ff59461c1353638a71e710f385a566bcd2f547","openSSLVersion":"OpenSSL 3.0.2 15 Mar 2022","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2204","distarch":"x86_64","target_arch":"x86_64"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.446+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"22.04"}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.446+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"},"security":{"authorization":"enabled"}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.448+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.448+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:53.448+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=1453M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
+[33mnodeserver_1     |[0m /app/index.js:172
+[33mnodeserver_1     |[0m console.log(MONGO_URL);
+[33mnodeserver_1     |[0m             ^
+[33mnodeserver_1     |[0m 
+[33mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[33mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[33mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[33mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[33mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[33mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[33mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[33mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[33mnodeserver_1     |[0m 
+[33mnodeserver_1     |[0m Node.js v19.6.0
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.649+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":1201}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.649+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.666+00:00"},"s":"W",  "c":"CONTROL",  "id":22178,   "ctx":"initandlisten","msg":"/sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'","tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.666+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":65530,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.673+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":17,"maxWireVersion":17},"outgoing":{"minWireVersion":17,"maxWireVersion":17},"isInternalClient":true}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.673+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"6.0","context":"startup"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.673+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.682+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.682+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.687+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.687+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.690+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.691+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:54.691+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+[34;1mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[32mmongo-express_1  |[0m Welcome to mongo-express
+[32mmongo-express_1  |[0m ------------------------
+[32mmongo-express_1  |[0m 
+[32mmongo-express_1  |[0m 
+[32mmongo-express_1  |[0m (node:7) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:55.922+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.23.0.3:51506","uuid":"900f9a50-ab61-4f6f-b764-449eb51cd45f","connectionId":1,"connectionCount":1}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:55.932+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.23.0.3:51506","client":"conn1","doc":{"driver":{"name":"nodejs","version":"3.7.3"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.0-21-cloud-amd64"},"platform":"'Node.js v12.22.7, LE (legacy)"}}}
+[33mmongo_1          |[0m {"t":{"$date":"2023-02-04T14:39:55.957+00:00"},"s":"I",  "c":"ACCESS",   "id":20250,   "ctx":"conn1","msg":"Authentication succeeded","attr":{"mechanism":"SCRAM-SHA-256","speculative":true,"principalName":"root","authenticationDatabase":"admin","remote":"172.23.0.3:51506","extraInfo":{}}}
+[32mmongo-express_1  |[0m Mongo Express server listening at http://0.0.0.0:8081
+[32mmongo-express_1  |[0m [31mServer is open to allow connections from anyone (0.0.0.0)[39m
+[32mmongo-express_1  |[0m [31mbasicAuth credentials are "admin:pass", it is recommended you change this in your config.js![39m
+[35mnodeserver_1     |[0m /app/index.js:172
+[35mnodeserver_1     |[0m console.log(MONGO_URL);
+[35mnodeserver_1     |[0m             ^
+[35mnodeserver_1     |[0m 
+[35mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[35mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[35mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[35mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[35mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[35mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[35mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[35mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[35mnodeserver_1     |[0m 
+[35mnodeserver_1     |[0m Node.js v19.6.0
+[33mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[34mnodeserver_1     |[0m /app/index.js:172
+[34mnodeserver_1     |[0m console.log(MONGO_URL);
+[34mnodeserver_1     |[0m             ^
+[34mnodeserver_1     |[0m 
+[34mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[34mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[34mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[34mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[34mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[34mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[34mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[34mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[34mnodeserver_1     |[0m 
+[34mnodeserver_1     |[0m Node.js v19.6.0
+[35mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[36;1mnodeserver_1     |[0m /app/index.js:172
+[36;1mnodeserver_1     |[0m console.log(MONGO_URL);
+[36;1mnodeserver_1     |[0m             ^
+[36;1mnodeserver_1     |[0m 
+[36;1mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[36;1mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[36;1mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[36;1mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[36;1mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[36;1mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[36;1mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[36;1mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[36;1mnodeserver_1     |[0m 
+[36;1mnodeserver_1     |[0m Node.js v19.6.0
+[34mgrocery-shop-project_nodeserver_1 exited with code 1
+[0m[33;1mnodeserver_1     |[0m /app/index.js:172
+[33;1mnodeserver_1     |[0m console.log(MONGO_URL);
+[33;1mnodeserver_1     |[0m             ^
+[33;1mnodeserver_1     |[0m 
+[33;1mnodeserver_1     |[0m ReferenceError: MONGO_URL is not defined
+[33;1mnodeserver_1     |[0m     at Object.<anonymous> (/app/index.js:172:13)
+[33;1mnodeserver_1     |[0m     at Module._compile (node:internal/modules/cjs/loader:1246:14)
+[33;1mnodeserver_1     |[0m     at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+[33;1mnodeserver_1     |[0m     at Module.load (node:internal/modules/cjs/loader:1103:32)
+[33;1mnodeserver_1     |[0m     at Module._load (node:internal/modules/cjs/loader:942:12)
+[33;1mnodeserver_1     |[0m     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+[33;1mnodeserver_1     |[0m     at node:internal/main/run_main_module:23:47
+[33;1mnodeserver_1     |[0m 
+[33;1mnodeserver_1     |[0m Node.js v19.6.0
+[36;1mgrocery-shop-project_nodeserver_1 exited with code 1
+[0mGracefully stopping... (press Ctrl+C again to force)

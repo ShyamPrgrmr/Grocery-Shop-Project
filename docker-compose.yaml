@@ -1,0 +1,51 @@
+services:
+  mongo:
+    build:
+      context: ./Backend/Mongo
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "27017:27017"
+  nodeserver:
+    build:
+      context: ./Backend/NodeServer
+      dockerfile: Dockerfile
+    depends_on: 
+      - mongo
+    restart: always
+    ports:
+      - "9000:9000"
+    environment:
+      - MONGO_URL=mongodb://root:root@34.118.241.84:27017/shop
+  pythonserver:
+    restart: always
+    build:
+      context: ./Backend/PythonServer
+      dockerfile: Dockerfile
+    ports:
+      - "3000:8000"
+  customersite:
+    restart: always
+    build:
+      context: ./Frontend/ClientPortal
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
+    depends_on: 
+      - nodeserver
+      - pythonserver
+    environment:
+      - NODE_SERVER_ENDPOINT="http://34.118.241.84:9000"
+      - PYTHON_SERVER_ENDPOINT="http://34.118.241.84:3000"
+  adminsite:
+    restart: always
+    build:
+      context: ./Frontend/AdminPortal
+      dockerfile: Dockerfile
+    environment:
+      - NODE_SERVER_ENDPOINT="http://34.118.241.84:9000"
+      - PYTHON_SERVER_ENDPOINT="http://34.118.241.84:3000"
+    ports:
+      - "80:3000"
+    depends_on:
+      - nodeserver
