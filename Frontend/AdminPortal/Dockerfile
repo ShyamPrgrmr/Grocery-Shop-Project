@@ -22,24 +22,26 @@ COPY . .
 #RUN rm -rf ./*
 #COPY --from=builder /app/build .
 #VOLUME ./nginx.conf:/etc/nginx/nginx.conf 
-ENV NODE_SERVER_ENDPOINT="http://34.118.241.84:9000"
-ENV PYTHON_SERVER_ENDPOINT="http://34.118.241.84:3000"
+#ENV NODE_SERVER_ENDPOINT="http://34.118.241.84:9000"
+#ENV PYTHON_SERVER_ENDPOINT="http://34.118.241.84:3000"
 #ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 
-WORKDIR /app/src
+#WORKDIR /app/src
 
 COPY startup.sh startup.sh
 
-RUN sh startup.sh
+#RUN sh startup.sh
 
-WORKDIR /app
-
-CMD ["npm","start"]
-
-EXPOSE 80
+#WORKDIR /app
 
 EXPOSE 3000
+
+CMD ["sh","startup.sh"]
+
+#EXPOSE 80
+
+#EXPOSE 3000
 #CMD ["npm","start"]
 
 

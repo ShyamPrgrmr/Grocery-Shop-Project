@@ -16,7 +16,8 @@ services:
     ports:
       - "9000:9000"
     environment:
-      - MONGO_URL=mongodb://root:root@34.118.241.84:27017/shop
+      - MONGO_URL=mongodb://root:root@mongo:27017/shop
+      - SENDER_EMAIL=shyam.march@outlook.com
   pythonserver:
     restart: always
     build:
@@ -35,16 +36,16 @@ services:
       - nodeserver
       - pythonserver
     environment:
-      - NODE_SERVER_ENDPOINT="http://34.118.241.84:9000"
-      - PYTHON_SERVER_ENDPOINT="http://34.118.241.84:3000"
+      - NODE_SERVER_ENDPOINT=http://34.125.108.238:9000
+      - PYTHON_SERVER_ENDPOINT=http://34.125.108.238:3000
   adminsite:
     restart: always
     build:
       context: ./Frontend/AdminPortal
       dockerfile: Dockerfile
     environment:
-      - NODE_SERVER_ENDPOINT="http://34.118.241.84:9000"
-      - PYTHON_SERVER_ENDPOINT="http://34.118.241.84:3000"
+      - NODE_SERVER_ENDPOINT=http://34.125.108.238:9000
+      - PYTHON_SERVER_ENDPOINT=http://34.125.108.238:3000
     ports:
       - "80:3000"
     depends_on:

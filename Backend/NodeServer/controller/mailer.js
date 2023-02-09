@@ -2,7 +2,19 @@ var AWS = require('aws-sdk');
 
 exports.Mailer =async(receiver,message) =>{
 
-AWS.config.update({region: process.env.AWS_REGION}); //create environmet variable for REGION
+console.log("AWS REGION : " + process.env.AWS_REGION);
+console.log("AWS EMAIL : " + process.env.SENDER_EMAIL);
+
+console.log("loading region");
+//AWS.config.update({region: ''}); //create environmet variable for REGION
+
+if (!AWS.config.region) {
+  AWS.config.update({
+    region: 'us-east-1'
+  });
+}
+
+//process.env.AWS_SDK_LOAD_CONFIG="true";
 
 let mailOptions = {
     from: process.env.SENDER_EMAIL, //create environment variable
@@ -40,6 +52,8 @@ var params = {
   Source: mailOptions.from, 
   ReplyToAddresses: []
 };
+
+console.log("sending email to : "+mailOptions.to);
 
 var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
