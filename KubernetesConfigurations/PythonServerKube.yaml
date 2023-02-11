@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonserver-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: pythonserver
+  template:
+    metadata:
+      labels:
+        app: pythonserver
+    spec:
+      containers:
+        - name: pythonserver
+          image: shyamya/pythonserver
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: pythonserver-service
+spec:
+  selector:
+    app: pythonserver
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 8000

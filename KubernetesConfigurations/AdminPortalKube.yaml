@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adminportal-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adminportal
+  template:
+    metadata:
+      labels:
+        app: adminportal
+    spec:
+      containers:
+        - name: adminportal
+          image: shyamya/adminportal
+          env:
+            - name: NODE_SERVER_ENDPOINT
+              value: http://nodeserver-service:9000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: adminportal-service
+spec:
+  selector:
+    app: adminportal
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000

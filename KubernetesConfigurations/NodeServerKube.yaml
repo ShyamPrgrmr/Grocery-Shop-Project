@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeserver-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: nodeserver
+  template:
+    metadata:
+      labels:
+        app: nodeserver
+    spec:
+      containers:
+        - name: nodeserver
+          image: shyamya/nodeserver
+          env:
+            - name: MONGO_URL
+              value: mongodb://root:root@mongo-service.default:27017/shop
+            - name: SENDER_EMAIL
+              value: shyam.march@outlook.com
+          
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeserver-service
+spec:
+  selector:
+    app: nodeserver
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 9000
+      targetPort: 9000
+
+

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: clientportal-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: clientportal
+  template:
+    metadata:
+      labels:
+        app: clientportal
+    spec:
+      containers:
+        - name: clientportal
+          image: shyamya/clientportal
+          env:
+            - name: NODE_SERVER_ENDPOINT
+              value: http://nodeserver-service:9000
+            - name: PYTHON_SERVER_ENDPOINT
+              value: http://pythonserver-service:3000
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: clientportal-service
+spec:
+  selector:
+    app: clientportal
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 3000
+
