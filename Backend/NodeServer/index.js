@@ -205,6 +205,7 @@ app.use((err,req,res,next)=>{
     let code  = err.code;
     let msg   = err.msg; 
     console.log("ERROR " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" URL="+ req.url);
+    console.log("\n"+msg);
     res.status(code).json({error : msg});
 });
 
