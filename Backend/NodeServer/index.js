@@ -6,6 +6,11 @@ const multer = require("multer");
 const path = require('path');
 const helmet = require('helmet');
 
+const fs = require('fs');
+
+//aws
+const AWS = require('aws-sdk');
+
 //file import
 const auth = require('./controller/auth');
 const product = require("./controller/product");
@@ -23,13 +28,16 @@ const app = express();
 const port = 8080;
 
 
-
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'images/product')
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().getTime()+""+(Math.floor(Math.random()*100000))+ new String(file.originalname).replace(/\s/g,"_").toLowerCase());
+        try{
+            cb(null, new Date().getTime()+""+(Math.floor(Math.random()*100000))+ new String(file.originalname).replace(/\s/g,"_").toLowerCase());
+        }catch(e){
+            console.log(e);
+        }
     }
 });
 
@@ -38,13 +46,19 @@ const strg = multer.diskStorage({
       cb(null, 'images/avatar')
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().getTime()+""+( Math.floor(Math.random()*100000) ) +new String(file.originalname).replace(/\s/g,"_").toLowerCase());
+        try{
+            cb(null, new Date().getTime()+""+( Math.floor(Math.random()*100000) ) +new String(file.originalname).replace(/\s/g,"_").toLowerCase());
+        }catch(e){
+            console.log(e);
+        }
+      
     }
 });
 
    
 const upload = multer({storage: storage});
 const uploadavatar = multer({storage: strg});
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
@@ -72,7 +86,7 @@ app.get('/', (req, res, next) => {res.status(200).json({msg:"Server is up..."});
 //log
 app.use('/',(req,res,next)=>{
     //console.log("Endpoint : " + req.url);
-    console.log('Date & Time : ',new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds());
+    console.log("INFO  " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" URL="+ req.url);
     next();
 });
 
@@ -105,7 +119,7 @@ app.post('/user/login',auth.userlogin);
 app.post('/user/setuserdata',isAuth,user.setuserdata);
 app.put('/user/updateuserdata',isAuth,user.updateuserdata);
 app.get('/user/getuserdata',isAuthGet,user.getuserdata);
-app.put('/user/updateuseravatar',uploadavatar.single('file'),isAuth,(req,res,next)=>{
+app.put('/user/updateuseravatar',uploadavatar.single('file'),(req,res,next)=>{
     const file = req.file;
     if (!file) {
         res.status(400).json({err:"Please Upload File!"});
@@ -120,14 +134,39 @@ app.post('/auth/forgotpassword',auth.forgotpassword);
 app.post('/auth/changepassword',isAuth,auth.changepassword);
 
 //product operation
-app.post('/admin/addproductimage', upload.array('file',1),isAuth,isAdmin,(req, res, next) => {
+
+app.post('/admin/addproductimage', upload.array('file',1),(req, res, next) => {
     const file = req.files;
     if (!file) {
         res.status(400).json({err:"Please Upload File!"});
     }else{
-        res.status(200).json(  new String(file[0].path).replace(/\\/g,"/"));
+        try{
+            const fileName = new String(file[0].path).replace(/\\/g,"/");
+            const s3 = new AWS.S3({
+                accessKeyId: process.env.AWS_S3_BUCKET_ACCESS_KEY_ID,
+                secretAccessKey: process.env.AWS_S3_BUCKET_ACCESS_KEY,
+                region: process.env.AWS_S3_REGION
+            });
+            const fileContent = fs.readFileSync(fileName);
+            const params = {
+                Bucket: process.env.AWS_S3_BUCKET_NAME,
+                Key: fileName, 
+                Body: fileContent
+            };
+            s3.upload(params, function(err, data) {
+                if (err) {
+                    throw err;
+                }
+                res.status(200).json(data.Location);
+            });
+        }catch(e){
+            next(e);
+        }    
     }  
 });
+
+
+
 app.post("/admin/addproductdata",isAuth,isAdmin,admin.addproduct);
 app.put('/admin/updateproduct',isAuth,isAdmin,admin.updateproduct);
 app.delete('/admin/deleteproduct',isAuth,isAdmin,admin.deleteproduct);
@@ -165,22 +204,21 @@ app.get("/admin/test",isAuthGet,isAdmin,admin.testing);
 app.use((err,req,res,next)=>{
     let code  = err.code;
     let msg   = err.msg; 
+    console.log("ERROR " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" URL="+ req.url);
     res.status(code).json({error : msg});
 });
 
-
-console.log("Connecting to: " +  process.env.MONGO_URL);
-
+console.log("INFO " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" CONNECTING DATABASE AT "+ process.env.MONGO_URL);
 mongoose.connect(
-   
     process.env.MONGO_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }
 ).then(result=>{
-    console.log("running");
-    app.listen(9000);
+    console.log("INFO  " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" DATABASE CONNECTED");
+    app.listen(process.env.PORT);
+    console.log("INFO  " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" SERVER RUNNING ON "+ process.env.PORT);
 }).catch(err=>{
-    console.log(err);
+    console.log("ERROR  " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" DATABASE ERROR "+err);
 })
