@@ -209,6 +209,19 @@ app.use((err,req,res,next)=>{
     res.status(code).json({error : msg});
 });
 
+
+console.log("----------------------------------------------------------------------------------------------------------------------");
+console.log("Keys : ");
+console.log("AWS_SES_SECRET_ACCESS_KEY : " + new String(process.env.AWS_SES_SECRET_ACCESS_KEY).substr(0,5));
+console.log("AWS_SES_ACCESS_KEY_ID : " + new String(process.env.AWS_SES_ACCESS_KEY_ID).substr(0,5));
+console.log("AWS_SES_REGION : " + new String(process.env.AWS_SES_REGION).substr(0,5));
+console.log("AWS_S3_BUCKET_NAME : " + new String(process.env.AWS_S3_BUCKET_NAME));
+console.log("AWS_S3_SECRET_ACCESS_KEY : " + new String(process.env.AWS_S3_SECRET_ACCESS_KEY).substr(0,5));
+console.log("AWS_S3_ACCESSKEY_ID : " + new String(process.env.AWS_S3_ACCESSKEY_ID).substr(0,5));
+console.log("AWS_SES_SENDER_EMAIL : " + new String(process.env.AWS_SES_SENDER_EMAIL).substr(0,5));
+console.log("----------------------------------------------------------------------------------------------------------------------");
+
+
 console.log("INFO " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" CONNECTING DATABASE AT "+ process.env.MONGO_URL);
 mongoose.connect(
     process.env.MONGO_URL,
