@@ -18,12 +18,12 @@ services:
     environment:
       - MONGO_URL=mongodb://root:root@mongo:27017/shop
       - AWS_SES_SENDER_EMAIL=shyam.march@outlook.com
-      - AWS_S3_ACCESSKEY_ID=AKIAYBMGHEIDCUQSBENW
-      - AWS_S3_SECRET_ACCESS_KEY=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
+      - AWS_S3_ACCESSKEY_ID=
+      - AWS_S3_SECRET_ACCESS_KEY=
       - AWS_S3_BUCKET_NAME=grocery-shop-bucket
       - AWS_SES_REGION=us-east-1
-      - AWS_SES_ACCESS_KEY_ID=AKIAYBMGHEIDG3Y53M4Y
-      - AWS_SES_SECRET_ACCESS_KEY=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
+      - AWS_SES_ACCESS_KEY_ID=
+      - AWS_SES_SECRET_ACCESS_KEY=
   pythonserver:
     restart: always
     build:
