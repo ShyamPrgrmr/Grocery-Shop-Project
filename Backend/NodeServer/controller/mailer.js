@@ -2,7 +2,7 @@ var AWS = require('aws-sdk');
 
 exports.Mailer =async(receiver,message) =>{
 
-const ses = AWS.SES({
+const ses = new AWS.SES({
   accessKeyId: process.env.AWS_SES_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SES_ACCESS_KEY,
   region: process.env.AWS_SES_REGION
@@ -51,7 +51,7 @@ var sendPromise = ses.sendEmail(params).promise();
 
 sendPromise.then(
   function(data) {
-    console.log("INFO " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" EMAIL HAS BEEN SEND TO "+ mailOptions.to);
+    console.log("INFO  " + new Date().toDateString(),"/",new Date().getHours(),":",new Date().getMinutes(),":",new Date().getSeconds() +" EMAIL HAS BEEN SEND TO "+ mailOptions.to);
     return data; 
   }).catch(
     function(err) {

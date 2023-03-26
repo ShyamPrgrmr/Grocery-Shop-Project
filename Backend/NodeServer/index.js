@@ -135,33 +135,34 @@ app.post('/auth/changepassword',isAuth,auth.changepassword);
 
 //product operation
 
-app.post('/admin/addproductimage', upload.array('file',1),(req, res, next) => {
+app.post('/admin/addproductimage',upload.array('file',1),(req, res, next) => {
     const file = req.files;
     if (!file) {
-        res.status(400).json({err:"Please Upload File!"});
+        res.status(404).json({err:"Please Upload File!"});
     }else{
         try{
             const fileName = new String(file[0].path).replace(/\\/g,"/");
             const s3 = new AWS.S3({
-                accessKeyId: process.env.AWS_S3_BUCKET_ACCESS_KEY_ID,
-                secretAccessKey: process.env.AWS_S3_BUCKET_ACCESS_KEY,
-                region: process.env.AWS_S3_REGION
+                accessKeyId: process.env.AWS_S3_ACCESSKEY_ID,
+                secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY
             });
             const fileContent = fs.readFileSync(fileName);
             const params = {
                 Bucket: process.env.AWS_S3_BUCKET_NAME,
-                Key: fileName, 
+                Key: fileName, // File name you want to save as in S3
                 Body: fileContent
             };
             s3.upload(params, function(err, data) {
                 if (err) {
                     throw err;
                 }
-                res.status(200).json(data.Location);
+                let temp = data.Location.substr(8).split("/");
+                let URL = temp[1]+"/"+temp[2]+"/"+temp[3]; 
+                res.status(200).json(URL);
             });
         }catch(e){
             next(e);
-        }    
+        } 
     }  
 });
 
